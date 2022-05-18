@@ -1,5 +1,5 @@
 # Use postgres/example user/password credentials
-version: '3.1'
+version: '3.7'
 
 services:
 
@@ -9,21 +9,17 @@ services:
     restart: always
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: example
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /data/postgres
     ports:
       - "5432:5432"
-    healthcheck:
-      test: [ "CMD-SHELL", "pg_isready", "-U", "postgres"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
     volumes:
-      - ${PWD}/sql:/docker-entrypoint-initdb.d
+      # - ${PWD}/sql:/docker-entrypoint-initdb.d
       - ./postgres-data:/var/lib/postgresql/data
       # copy the sql script to create tables
       - ./sql/create-tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
       # copy the sql script to fill tables
-      - ./sql/fill_tables.sql:/docker-entrypoint-initdb.d/fill_tables.sql
+      # - ./sql/fill_tables.sql:/docker-entrypoint-initdb.d/fill_tables.sql
 
 
   adminer:

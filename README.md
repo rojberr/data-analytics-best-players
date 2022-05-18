@@ -75,10 +75,19 @@ Create a Docker database with schema and import the CSV into the database.
 Install docker and run:
 > $ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 , or use the docker-compose.yml file from this repository by running:
-> $ docker-compose up -d
+## Run
+```sh
+$ docker-compose up -d 
+```
+(remember to remove it with "docker-compose down --volumes" - otherwise the initialization will be skipped)
 This will create container with postgres database. Credentials:
 user: postgres
 pass: example 
 
 How to quickly fill it with data?
 I downloaded the .csv file and 
+
+## ER Diagram
+The ER Diagram of DB looks like this:
+
+<img width="809" alt="ER_Diagram" src="... .png">
