@@ -1,10 +1,12 @@
-## Data analytics case project
-# How to choose the best new NHL player to inquire
+## Data analytics - Best players
+# How to choose the best new NBA player to inquire
 
 # What is this project about
 
 This project tries to show and demonstrate how to answer typical client questions and solve problems using data in somewhat bigger quantities.
 Something that a real analytics specialist encounters in his day to day job.  
+
+[Foto von Tima Miroshnichenko von Pexels](tima-miroshnichenko-5586480.jpg)
 
 This is not a typical GitHub code repository.
 
@@ -91,3 +93,5 @@ I downloaded the .csv file and
 The ER Diagram of DB looks like this:
 
 <img width="809" alt="ER_Diagram" src="... .png">
+
+[Foto von Vitaly Vlasov von Pexels](vitaly-vlasov-1342460.jpg)
