@@ -5,12 +5,17 @@ services:
 
   db:
     image: postgres
+    container_name: nba-postgres-db
     restart: always
     environment:
       POSTGRES_PASSWORD: example
+    volumes:
+      - ${PWD}/sql:/sql
+    
 
   adminer:
     image: adminer
+    container_name: php-admin
     restart: always
     ports:
       - 8080:8080
