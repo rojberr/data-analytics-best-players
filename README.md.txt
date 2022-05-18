@@ -27,6 +27,8 @@ to do so ;) It should help you create a similar project.
 I tried to present my somewhat limited business intelligence of an NHL coach, trying to answer questions which would
 help me buy new players to my team with best value for money ratio.
 
+# Steps
+
 1) Get the data!
 
 Getting to the bone may be sometimes difficult. Although we can freely download data from official state sites like:
