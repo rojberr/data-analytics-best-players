@@ -70,12 +70,12 @@ I decided to use https://www.kaggle.com/ as the data provider, because its free 
 
 3) Create database and fill it with your collected data
 
-How to create database quickly?
+Create a Docker database with schema and import the CSV into the database.
 
 Install docker and run:
 > $ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 , or use the docker-compose.yml file from this repository by running:
-> $ docker-compose up 
+> $ docker-compose up -d
 This will create container with postgres database. Credentials:
 user: postgres
 pass: example 
