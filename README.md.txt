@@ -72,5 +72,13 @@ I decided to use https://www.kaggle.com/ as the data provider, because its free 
 
 How to create database quickly?
 
-Install docker and run
-$ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+Install docker and run:
+> $ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+, or use the docker-compose.yml file from this repository by running:
+> $ docker-compose up 
+This will create container with postgres database. Credentials:
+user: postgres
+pass: example 
+
+How to quickly fill it with data?
+I downloaded the .csv file and 
