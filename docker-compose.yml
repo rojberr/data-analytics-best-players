@@ -18,13 +18,14 @@ services:
       - ./postgres-data:/var/lib/postgresql/data
       # copy the sql script to create tables
       - ./sql/create-tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+      - ./sql/init_docker_postgres.sh:/docker-entrypoint-initdb.d/init_docker_postgres.sh
+      - ./postgres-data:/docker-entrypoint-initdb.d/
       # copy the sql script to fill tables
       # - ./sql/fill_tables.sql:/docker-entrypoint-initdb.d/fill_tables.sql
 
-
   adminer:
     image: adminer
-    container_name: php-admin
+    container_name: pg4-admin
     restart: always
     ports:
       - 8080:8080

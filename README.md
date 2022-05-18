@@ -89,6 +89,8 @@ pass: example
 How to quickly fill it with data?
 I downloaded the .csv file and 
 
+COPY players(player_name,team_id,player_id,season) FROM '/var/lib/postgresql/data/players.csv' DELIMITER ',' CSV HEADER;
+
 ## ER Diagram
 The ER Diagram of DB looks like this:
 
