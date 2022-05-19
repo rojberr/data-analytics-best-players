@@ -1,7 +1,7 @@
-## Data analytics - Best players
-# How to choose the best new NBA player to inquire
+# Data analytics - Best players
+## How to choose the best new NBA player to inquire
 
-# What is this project about
+### What is this project about
 
 This project tries to show and demonstrate how to answer typical client questions and solve problems using data in somewhat bigger quantities.
 Something that a real analytics specialist encounters in his day to day job.  
@@ -25,7 +25,7 @@ You can use my checklist
 to do so ;) It should help you create a similar project.
 
 
-# User scenario - Find most valuable player
+# User scenario - Find the most valuable player
 
 "I need a new player for my team, which should I choose?"
 
