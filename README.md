@@ -77,12 +77,19 @@ $ docker-compose up -d
 (remember to remove it with "docker-compose down --volumes" - otherwise the initialization will be skipped)
 
 This will create container with postgres database. Credentials:
-> user: postgres
+> user: postgres  
+
 > pass: example 
 
 ## UML ER Diagram
 The ER Diagram (UML style) of DB looks like this:
 
 ![UML diagram](./img/database-UML.jpg)  
+
+The database will be created automatically and filled with .csv files mentioned in create-tables.sql init file. Check the syntax yourself! Then you need to create the views either by logging in by adminer or by console. I personally used IntelliJ Data Tool. Create the views using my .sql scripts.
+
+# 4) Visualize it
+
+
 
 ![Foto von Vitaly Vlasov von Pexels](./img/vitaly-vlasov-1342460.jpg)
