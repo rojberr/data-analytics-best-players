@@ -68,7 +68,9 @@ I decided to use https://www.kaggle.com/ as the data provider, because it has a 
 
 I was thinking about Google BigQuery, SQLite3, but I finally have chosen Postgres in Dockerized enviroment.
 
-To create a Docker database and fill it with data from CSV use my docker-compose.yml (I'm assuming you have Docker installed on your system ^^). Run:  
+To create a Docker database and fill it with data from CSV use my docker-compose.yml 
+(I'm assuming you have Docker installed on your system ^^ If not, and you use Windows system try: [https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers)).   
+Run:  
 ```sh
 $ docker-compose up -d 
 ```
