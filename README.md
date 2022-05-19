@@ -25,35 +25,18 @@ You can use my checklist
 to do so ;) It should help you create a similar project.
 
 
-# What can you find inside
+# User scenario - Find most valuable player
+
+"I need a new player for my team, which should I choose?"
 
 I tried to present my somewhat limited business intelligence of an NBA coach, trying to answer questions which would
 help me buy new players to my team with best value for money ratio.
 
-"I need a new player for my team, which should I choose?"
-
-# Steps
-
-1) Get the data!
-
-Getting to the bone may be sometimes difficult. Although we can freely download data from official state sites like:
-- ["Statistisches Bundesamt"](https://www.destatis.de/DE/Home/_inhalt.html),
-- ["Główny urząd statystyczny"](https://stat.gov.pl/),
-- [Stats NZ](https://stats.govt.nz/large-datasets/csv-files-for-download/),
-- [Google Big Query Datasets](https://cloud.google.com/bigquery/)
-
-...
-
-2) List out the important questions!
-
-I decided to play the role of the NHL club's manager.
-...  
+# 1) List out the important questions:
 
 "I want a new player. Which one should I buy?"
 "He should play on this position, ... this is my perspective"
 "I am the owner of the club and i want it"
-
-... 
 
 I could go and see a lot of NBA plays and get my own personal opinion
 about different players and then choose the best one from my point of view.
@@ -62,22 +45,26 @@ Solid companies are based on data. Data is objective and not subjective,
 and that's why business needs people who are able to make a fitting choice 
 based on collected data.
 
-
 To answer the question: "Which player will be the best choice?", I need to answer sub-questions.
 
 Questions:
-1) Which player scored the most points in last season?
-2) Which player had the least injuries in last season?
-3) How much do those players cost? What is they price?
+1. Which player scored the most points in last season? How many points each of them scored in the last season?
+2. Which player had the least injuries in last season?
+3. How much do those players cost? What is they price?  
 
-4) 
-2) What positions do those players play?
-4) How many points each of them scored in the last season?
+
+# 2) Get the data!
+
+Getting to the bone may be sometimes difficult. Although we can freely download data from official state sites like:
+- ["Statistisches Bundesamt"](https://www.destatis.de/DE/Home/_inhalt.html),
+- ["Główny urząd statystyczny"](https://stat.gov.pl/),
+- [Stats NZ](https://stats.govt.nz/large-datasets/csv-files-for-download/),
+- [Google Big Query Datasets](https://cloud.google.com/bigquery/)
 
 
 I decided to use https://www.kaggle.com/ as the data provider, because its free ... 
 
-3) Create database and fill it with your collected data
+# 3) Create database and fill it with your collected data
 
 I was thinking about Google BigQuery, SQLLite3, but finally chosen Postgres.
 
