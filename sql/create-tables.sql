@@ -68,3 +68,13 @@ CREATE TABLE players (
 );
 COPY players(PLAYER_NAME, TEAM_ID, PLAYER_ID, SEASON) 
 FROM '/var/lib/postgresql/data/players.csv' DELIMITER ',' CSV HEADER;
+
+CREATE TABLE injuries_2010-2020.csv (
+  DATE text,
+  TEAM text,
+  ACQUIRED text,
+  RELINQUISHED text,
+  NOTES text
+)
+COPY players(Date, Team, Acquired, Relinquished, Notes) 
+FROM '/var/lib/postgresql/data/injuries_2010-2020.csv' DELIMITER ',' CSV HEADER;
