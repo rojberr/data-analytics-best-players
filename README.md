@@ -40,6 +40,7 @@ Getting to the bone may be sometimes difficult. Although we can freely download 
 - ["Statistisches Bundesamt"](https://www.destatis.de/DE/Home/_inhalt.html),
 - ["Główny urząd statystyczny"](https://stat.gov.pl/),
 - [Stats NZ](https://stats.govt.nz/large-datasets/csv-files-for-download/),
+- [Google Big Query Datasets](https://cloud.google.com/bigquery/)
 
 ...
 
@@ -78,6 +79,8 @@ I decided to use https://www.kaggle.com/ as the data provider, because its free 
 
 3) Create database and fill it with your collected data
 
+I was thinking about Google BigQuery, SQLLite3, but finally chosen Postgres.
+
 Create a Docker database with schema and import the CSV into the database.
 
 Install docker and run:
@@ -100,6 +103,6 @@ COPY players(player_name,team_id,player_id,season) FROM '/var/lib/postgresql/dat
 ## ER Diagram
 The ER Diagram of DB looks like this:
 
-<img width="809" alt="UML_Diagram" src="./img/database-UML.jpg">
+![UML diagram](./img/database-UML.jpg)  
 
 ![Foto von Vitaly Vlasov von Pexels](./img/vitaly-vlasov-1342460.jpg)
