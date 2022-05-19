@@ -94,6 +94,6 @@ COPY players(player_name,team_id,player_id,season) FROM '/var/lib/postgresql/dat
 ## ER Diagram
 The ER Diagram of DB looks like this:
 
-<img width="809" alt="ER_Diagram" src="... .png">
+<img width="809" alt="ER_Diagram" src="database-UML.jpg">
 
 ![Foto von Vitaly Vlasov von Pexels](vitaly-vlasov-1342460.jpg)
