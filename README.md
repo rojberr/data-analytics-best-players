@@ -62,33 +62,24 @@ Getting to the bone may be sometimes difficult. Although we can freely download 
 - [Google Big Query Datasets](https://cloud.google.com/bigquery/)
 
 
-I decided to use https://www.kaggle.com/ as the data provider, because its free ... 
+I decided to use https://www.kaggle.com/ as the data provider, because it has a lot of free and reliable data (some of which may be old, be it should be enought for this project).
 
 # 3) Create database and fill it with your collected data
 
-I was thinking about Google BigQuery, SQLLite3, but finally chosen Postgres.
+I was thinking about Google BigQuery, SQLite3, but I finally have chosen Postgres in Dockerized enviroment.
 
-Create a Docker database with schema and import the CSV into the database.
-
-Install docker and run:
-> $ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
-, or use the docker-compose.yml file from this repository by running:
-## Run
+To create a Docker database and fill it with data from CSV use my docker-compose.yml (I'm assuming you have Docker installed on your system ^^). Run:  
 ```sh
 $ docker-compose up -d 
 ```
 (remember to remove it with "docker-compose down --volumes" - otherwise the initialization will be skipped)
+
 This will create container with postgres database. Credentials:
-user: postgres
-pass: example 
+> user: postgres
+> pass: example 
 
-How to quickly fill it with data?
-I downloaded the .csv file and 
-
-COPY players(player_name,team_id,player_id,season) FROM '/var/lib/postgresql/data/players.csv' DELIMITER ',' CSV HEADER;
-
-## ER Diagram
-The ER Diagram of DB looks like this:
+## UML ER Diagram
+The ER Diagram (UML style) of DB looks like this:
 
 ![UML diagram](./img/database-UML.jpg)  
 
