@@ -90,6 +90,14 @@ The database will be created automatically and filled with .csv files mentioned 
 
 # 4) Visualize it
 
+The questions are partially answered, the views are created - the "backend" is ready. It's time to prepare the "frontend" and visualize our results.
+
+There are many different tools I could choose, including:
+- []() tableu
+- []() clicksense
+- []() data blicks
+- []() powerbi
+- []() data studio (for GCP and BigQuery)
 
 
 ![Foto von Vitaly Vlasov von Pexels](./img/vitaly-vlasov-1342460.jpg)
