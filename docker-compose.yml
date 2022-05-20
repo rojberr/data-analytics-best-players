@@ -5,7 +5,7 @@ services:
 
   db:
     image: postgres:alpine
-    container_name: nba-postgres-db
+    container_name: postgres
     restart: always
     environment:
       POSTGRES_DB: postgres
@@ -14,7 +14,6 @@ services:
       PGDATA: /data/postgres
     ports:
       - "5432:5432"
-    command: ["postgres", "-c", "logging_collector=on", "-c", "log_directory=/logs", "-c", "log_filename=postgresql.log", "-c", "log_statement=all"]
     volumes:
       # copy the CSV to create tables
       - ./postgres-data:/var/lib/postgresql/data
@@ -28,11 +27,18 @@ services:
     ports:
       - 8080:8080
 
-  grafana:
-    container_name: grafana
-    image: grafana/grafana-oss
-    restart: unless-stopped
-    depends_on:
-      - postgres
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase
+    hostname: metabase
     ports:
       - 3000:3000
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: postgres
+      MB_DB_USER: postgres
+      MB_DB_PASS: postgres
+      MB_DB_HOST: postgres
+    depends_on:
+      - db
+    
