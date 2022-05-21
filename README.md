@@ -100,4 +100,6 @@ There are many different tools I could choose, including:
 - []() data studio (for GCP and BigQuery)
 
 
+![PDF with results](final-result.pdf "PDF with results")
+
 ![Foto von Vitaly Vlasov von Pexels](./img/vitaly-vlasov-1342460.jpg)
