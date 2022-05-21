@@ -99,9 +99,6 @@ There are many different tools I could choose, including:
 - []() powerbi
 - []() data studio (for GCP and BigQuery)
 
-<object data="./final-result" type="application/pdf" width="100%"> 
-</object>
-
-![PDF with results](./final-result.pdf)
+![PNG with results](./final-results.png)
 
 ![Foto von Vitaly Vlasov von Pexels](./img/vitaly-vlasov-1342460.jpg)
