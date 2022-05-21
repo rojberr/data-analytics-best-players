@@ -93,12 +93,16 @@ The database will be created automatically and filled with .csv files mentioned 
 The questions are partially answered, the views are created - the "backend" is ready. It's time to prepare the "frontend" and visualize our results.
 
 There are many different tools I could choose, including:
-- []() tableu
-- []() clicksense
-- []() data blicks
-- []() powerbi
-- []() data studio (for GCP and BigQuery)
+- [Tableau](https://www.tableau.com/)
+- [Qlick Sense](https://www.qlik.com/)
+- [Data Blocks](https://datablocks.pro/)
+- [Power BI](https://powerbi.microsoft.com/en-au/)
+- [Data Studio (mainly for GCP and BigQuery)](https://datastudio.google.com/)
 
 ![PNG with results](./final-results.png)
 
 ![Foto von Vitaly Vlasov von Pexels](./img/vitaly-vlasov-1342460.jpg)
+
+
+This project took me 2-3 days, and was done mostly after my job, as extra work. ^^
+Feel free to comment, collaborate or express your opinion!
