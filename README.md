@@ -51,12 +51,7 @@ Before we even list out the important question we need to acknowledge what kind 
 In NBA only specific kind of characteristics are measured and saved for each player. Those include not only physical attributes
 but also different scoring systems. The short overview with a few of the collected characteristics was summarised below.
 
-![ERD-diagram](./img/ERD-diagram.jpg)
-
-## ... , where:
-
--
--
+![UML diagram](./img/database-UML.jpg)
 
 To answer the question: "Which player will be the best choice?", I need to answer sub-questions.
 
@@ -96,12 +91,6 @@ This will create container with postgres database. Credentials:
 > user: postgres
 
 > pass: example
-
-## UML ER Diagram
-
-The ER Diagram (UML style) of DB looks like this:
-
-![UML diagram](./img/database-UML.jpg)
 
 The database will be created automatically and filled with .csv files mentioned in create-tables.sql init file. Check the syntax yourself! Then you need to create the views either by logging in by adminer or by console. I personally used IntelliJ Data Tool. Create the views using my .sql scripts.
 
