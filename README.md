@@ -51,7 +51,7 @@ Before we even list out the important question we need to acknowledge what kind 
 In NBA only specific kind of characteristics are measured and saved for each player. Those include not only physical attributes
 but also different scoring systems. The short overview with a few of the collected characteristics was summarised below.
 
-![UML diagram](./img/database-UML.jpg)
+![ERD-diagram](./img/ERD-diagram.jpg)
 
 ## ... , where:
 
