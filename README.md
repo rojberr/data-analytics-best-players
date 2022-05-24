@@ -112,3 +112,4 @@ There are many different tools I could choose, including:
 
 This project took me 2-3 days, and was done mostly after my job, as extra work. ^^
 Feel free to comment, collaborate or express your opinion!
+This database could be remade to avoid repetitions and upgrade relations between them.

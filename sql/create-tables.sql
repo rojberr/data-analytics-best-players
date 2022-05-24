@@ -80,7 +80,7 @@ COPY injuries_2020(EVENT_DATE, TEAM, ACQUIRED, RELINQUISHED, NOTES)
 FROM '/var/lib/postgresql/data/injuries_2020.csv' DELIMITER ',' CSV HEADER;
 
 CREATE TABLE nba1718salary (
-  ID numeric,
+  ID numeric PRIMARY KEY,
   PLAYER text,
   TEAM text,
   SEASON1718 numeric
