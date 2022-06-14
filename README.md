@@ -39,7 +39,7 @@ to do so ;) It should help you create a similar project.
 
 First of all a database ER diagram was created.
 
-![ERD diagram](./img/ERD-diagram-8.jpg)
+![ERD diagram](./img/ERD-diagram-9.jpg)
 
 # b) Get the data!!
 
