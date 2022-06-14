@@ -40,6 +40,10 @@ to do so ;) It should help you create a similar project.
 First of all a database ER diagram was created.
 
 ![ERD diagram](./img/ERD-diagram-4.jpg)
+![ERD diagram](./img/ERD-diagram-5.jpg)
+![ERD diagram](./img/ERD-diagram-6.jpg)
+![ERD diagram](./img/ERD-diagram-7.jpg)
+![ERD diagram](./img/ERD-diagram-8.jpg)
 
 # b) Get the data!!
 
