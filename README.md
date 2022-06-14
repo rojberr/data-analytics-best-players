@@ -50,7 +50,7 @@ Getting to the bone and finding relevant data may be difficult. There are many v
 - [Stats NZ](https://stats.govt.nz/large-datasets/csv-files-for-download/),
 - [Google Big Query Datasets](https://cloud.google.com/bigquery/)
 
-I decided to use https://www.kaggle.com/ as the data provider, because it has a lot of free and reliable data (some of which may be old, be it should be enought for this project).
+I decided to use https://www.kaggle.com/ as the data provider, because it has a lot of free and reliable data (some of which may be old, be it should be enought for this demonstration project).
 
 ## c) Create database and fill it with your collected data
 
@@ -100,9 +100,7 @@ based on collected data.
 Before we even list out the important question we need to acknowledge what kind of data is available.
 
 In NBA only specific kind of characteristics are measured and saved for each player. Those include not only physical attributes
-but also different scoring systems. The short overview with a few of the collected characteristics was summarised below.
-
-![UML diagram](./img/database-UML.jpg)
+but also different scoring systems.
 
 To answer the question: "Which player will be the best choice?", I need to answer sub-questions.
 
