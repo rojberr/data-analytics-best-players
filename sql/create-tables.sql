@@ -87,3 +87,6 @@ CREATE TABLE nba1718salary (
 );
 COPY nba1718salary(ID, PLAYER, TEAM, SEASON1718) 
 FROM '/var/lib/postgresql/data/nba1718salary.csv' DELIMITER ',' CSV HEADER;
+
+
+CREATE DATABASE metabase;

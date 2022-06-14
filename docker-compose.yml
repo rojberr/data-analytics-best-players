@@ -3,9 +3,9 @@ version: '3.7'
 
 services:
 
-  db:
+  postgres-db:
     image: postgres:alpine
-    container_name: postgres
+    container_name: postgres-db
     restart: always
     environment:
       POSTGRES_DB: postgres
@@ -20,25 +20,23 @@ services:
       # copy the sql script to create tables
       - ./sql/create-tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
 
-  adminer:
-    image: adminer
-    container_name: adminer
-    restart: always
-    ports:
-      - 8080:8080
-
   metabase:
     image: metabase/metabase:latest
+    restart: always
     container_name: metabase
     hostname: metabase
     ports:
       - 3000:3000
+    volumes:
+      - /home/app/metabase-data:/metabase-data
     environment:
       MB_DB_TYPE: postgres
-      MB_DB_DBNAME: postgres
+      MB_DB_DBNAME: metabase
+      MB_DB_PORT: 5432
       MB_DB_USER: postgres
       MB_DB_PASS: postgres
-      MB_DB_HOST: postgres
+      MB_DB_HOST: postgres-db
     depends_on:
-      - db
-    
+      - postgres-db
+    links:
+      - postgres-db
