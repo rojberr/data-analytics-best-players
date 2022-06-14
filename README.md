@@ -41,7 +41,7 @@ First of all a database ER diagram was created.
 
 ![ERD diagram](./img/ERD-diagram-2.jpg)
 
-# b) Get the data!
+# b) Get the data!!
 
 Getting to the bone may be sometimes difficult. Although we can freely download data from official state sites like:
 
