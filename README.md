@@ -6,9 +6,6 @@
 
 This is not a typical GitHub code repository.
 
-This project tries to show and demonstrate how to answer typical client questions and solve problems using data in somewhat bigger quantities.
-Something that a real analytics specialist encounters in his day to day job.
-
 This project is divided in 2 parts, where:
 
 - first part - database creation - creates PostgreSQL database in Docker environment, including the database normalization and fills it with data from
@@ -20,6 +17,9 @@ then extract the most relevant data to answer business relevant questions - a sk
 This ability allows us to confront our subjective opinions with raw data.
 
 ![Foto von Tima Miroshnichenko von Pexels](./img/tima-miroshnichenko-5586480.jpg)
+
+This project tries to show and demonstrate how to answer typical client questions and solve problems using data in somewhat bigger quantities.
+Something that a real analytics specialist encounters in his day to day job.
 
 If you are still interested feel free to go through the steps below.
 Draw your own conclusions and let me know if I could make it even better.
@@ -43,7 +43,7 @@ First of all a database ER diagram was created.
 
 # b) Get the data!!
 
-Getting to the bone may be sometimes difficult. Although we can freely download data from official state sites like:
+Getting to the bone and finding relevant data may be difficult. There are many various ways to obtain it. F.e.: We can freely download data from official state sites like:
 
 - [Statistisches Bundesamt](https://www.destatis.de/DE/Home/_inhalt.html),
 - [Główny urząd statystyczny](https://stat.gov.pl/),
@@ -54,17 +54,18 @@ I decided to use https://www.kaggle.com/ as the data provider, because it has a 
 
 # c) Create database and fill it with your collected data
 
-I was thinking about Google BigQuery, SQLite3, but I finally have chosen Postgres in Dockerized enviroment.
+I was thinking about Google BigQuery, SQLite3, but finally I have chosen Postgres in Dockerized enviroment.
 
 To create a Docker database and fill it with data from CSV use my docker-compose.yml
-(I'm assuming you have Docker installed on your system ^^ If not, and your using Windows system try: [WSL or WSL2](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers)).  
+(I'm assuming you have Docker installed on your system ^^ If not, try: [Docker intallation manual](https://docs.docker.com/engine/install/)).
+
 Run:
 
 ```sh
 $ docker-compose up -d
 ```
 
-(remember to remove it with "docker-compose down --volumes" - otherwise the initialization will be skipped)
+(remember to remove your containers with "docker-compose down --volumes" - otherwise the initialization will be skipped for relaunches)
 
 This will create container with postgres database. Credentials:
 
