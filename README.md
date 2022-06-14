@@ -33,15 +33,15 @@ You can use my checklist from this repository:
 
 to do so ;) It should help you create a similar project.
 
-## Part 1 - Database creation
+# Part 1 - Database creation
 
-# a) Designing the database graph
+## a) Designing the database graph
 
 First of all a database ER diagram was created.
 
 ![ERD diagram](./img/ERD-diagram-9.jpg)
 
-# b) Get the data!!
+## b) Get the data!!
 
 Getting to the bone and finding relevant data may be difficult. There are many various ways to obtain it. F.e.: We can freely download data from official state sites like:
 
@@ -52,7 +52,7 @@ Getting to the bone and finding relevant data may be difficult. There are many v
 
 I decided to use https://www.kaggle.com/ as the data provider, because it has a lot of free and reliable data (some of which may be old, be it should be enought for this project).
 
-# c) Create database and fill it with your collected data
+## c) Create database and fill it with your collected data
 
 I was thinking about Google BigQuery, SQLite3, but finally I have chosen Postgres in Dockerized enviroment.
 
@@ -75,16 +75,16 @@ This will create container with postgres database. Credentials:
 
 The database will be created automatically and filled with .csv files mentioned in create-tables.sql init file. Check the syntax yourself! Then you need to create the views either by logging in by adminer or by console. I personally used IntelliJ Data Tool. Create the views using my .sql scripts.
 
-## Part 2 - Data analysis
+# Part 2 - Data analysis
 
-# User scenario - Find the most valuable player
+## User scenario - Find the most valuable player
 
 "I need a new player for my team, which should I choose?"
 
 I tried to present my somewhat limited business intelligence of an NBA coach, trying to answer questions which would
 help me buy new players to my team with best value for money ratio.
 
-# 1) List out the important questions:
+## 1) List out the important questions:
 
 "I want a new player. Which one should I buy?"
 "He should play on this position, ... this is my perspective"
@@ -112,7 +112,7 @@ Questions:
 2. Which player had the least injuries in last season?
 3. How much do those players cost? What is they price?
 
-# 4) Visualize it
+## 4) Visualize it
 
 The questions are partially answered, the views are created - the "backend" is ready. It's time to prepare the "frontend" and visualize our results.
 
