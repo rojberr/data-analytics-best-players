@@ -8,13 +8,11 @@ This is not a typical GitHub code repository.
 
 This project is divided in 2 parts, where:
 
-- first part - database creation - creates PostgreSQL database in Docker environment, including the database normalization and fills it with data from
-  .csv files found on Internet,
+- first part - entity relationship diagram (ERD) creation, database implementation, relational schema - creates PostgreSQL database in Docker environment, including the database normalization (up to 3N) and fills it with data from .csv files found on Internet,
 - second part - analyzes the data, answers NBA trainer business questions and creates a report to visualize and summarise it.
 
 This projects illustrates how to gather data, insert it into a database and
-then extract the most relevant data to answer business relevant questions - a skill that we all need.
-This ability allows us to confront our subjective opinions with raw data.
+then extract the most relevant data to answer business relevant questions - a skill that we all need. This ability allows us to confront our subjective opinions with raw data.
 
 ![Foto von Tima Miroshnichenko von Pexels](./img/tima-miroshnichenko-5586480.jpg)
 
@@ -25,7 +23,7 @@ If you are still interested feel free to go through the steps below.
 Draw your own conclusions and let me know if I could make it even better.
 
 This project may be an example of first data analytics project.
-If that's your goal, please, feel inspired to do something similar!
+If that's your goal, please, feel inspired to do something similar or do even more!
 
 You can use my checklist from this repository:
 
@@ -35,13 +33,48 @@ to do so ;) It should help you create a similar project.
 
 # Part 1 - Database creation
 
-## a) Designing the database graph
+## a) Designing the Entity relationship diagram (ERD)
 
-First of all a database ER diagram was created.
+The first step included the creation of ERD, graphical representation of business relationships, lacking specific detail but providing an overview of scope. This diagram was created in Figma. (Shoutout to Figma devs!)
 
-![ERD diagram](./img/ERD-diagram-10.jpg)
+![ERD diagram](./img/ERD-diagram-11.png)
 
-## b) Get the data!!
+## b) Create database using PostgreSQL
+
+I was thinking about using Google BigQuery or SQLite3 database, but finally I finally decided to use Postgres in Dockerized enviroment. I used following commands:
+
+```
+CREATE TABLE SEASONS ( SEASON date, SEASON_DESC text,
+  PRIMARY KEY(SEASON)
+);
+CREATE TABLE GAMES (
+  GAME_ID int GENERATED ALWAYS AS IDENTITY, GAME_DATE date,
+  PRIMARY KEY(GAME_ID)
+);
+CREATE TABLE PLAYERS ( PLAYER_NAME text, BORN date, PLAYER_HEIGHT INT, PLAYER_WEIGHT INT, PLAYER_COLLEGE text, COUNTRY text, DRAFT_YEAR date,
+  PRIMARY KEY(PLAYER_NAME)
+);
+CREATE TABLE PLAYER_INJURIES ( INJURY_ID INT GENERATED ALWAYS AS IDENTITY,  PLAYER_NAME text, GAME_ID INT NOT NULL, RELINQUISHED text, NOTES text,
+  PRIMARY KEY(INJURY_ID),
+CONSTRAINT fk_player FOREIGN KEY(PLAYER_NAME) REFERENCES players(PLAYER_NAME),
+CONSTRAINT fk_game FOREIGN KEY(GAME_ID) REFERENCES games(GAME_ID)
+);
+CREATE TABLE PLAYER_SALARIES ( SALARY_ID INT GENERATED ALWAYS AS IDENTITY,   PLAYER_NAME text NOT NULL, SEASON_TOTAL INT, SEASON date NOT NULL, PRIMARY KEY(SALARY_ID),
+CONSTRAINT fk_playername FOREIGN KEY(PLAYER_NAME) REFERENCES players(player_name),
+CONSTRAINT fk_season FOREIGN KEY(SEASON) REFERENCES seasons(SEASON)
+);
+CREATE TABLE PLAYER_SEASON_RESULTS ( SCORE_ID INT GENERATED ALWAYS AS IDENTITY, PLAYER_NAME text NOT NULL, SEASON date, TEAM_ABBREVIATION text,SEASON_GAMES_PLAYED INT, SEASON_POINTS INT, SEASON_REBOUNDS INT, SEASON_ASSISTS INT, SEASON_NET_RAT INT,
+PRIMARY KEY(SCORE_ID),
+CONSTRAINT fk_playername FOREIGN KEY(PLAYER_NAME) REFERENCES players(player_name),
+CONSTRAINT fk_season FOREIGN KEY(SEASON) REFERENCES seasons(SEASON)
+);
+```
+
+The result was illustrated with UML diagram below:
+
+![UML diagram](./img/database-UML.jpg)
+
+## c) Get the data!!
 
 Getting to the bone and finding relevant data may be difficult. There are many various ways to obtain it. F.e.: We can freely download data from official state sites like:
 
@@ -52,12 +85,9 @@ Getting to the bone and finding relevant data may be difficult. There are many v
 
 I decided to use https://www.kaggle.com/ as the data provider, because it has a lot of free and reliable data (some of which may be old, be it should be enought for this demonstration project).
 
-## c) Create database and fill it with your collected data
+## d) Fill the database with your collected data
 
-I was thinking about Google BigQuery, SQLite3, but finally I have chosen Postgres in Dockerized enviroment.
-
-To create a Docker database and fill it with data from CSV use my docker-compose.yml
-(I'm assuming you have Docker installed on your system ^^ If not, try: [Docker intallation manual](https://docs.docker.com/engine/install/)).
+To create a Docker database and fill it with data from CSV use my docker-compose.yml (I'm assuming you have Docker installed on your system ^^ If not, try: [Docker intallation manual](https://docs.docker.com/engine/install/)).
 
 Run:
 
